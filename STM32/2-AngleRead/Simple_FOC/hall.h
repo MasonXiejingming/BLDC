@@ -43,7 +43,12 @@ extern unsigned long velocity_calc_timestamp;
 extern float angle_prev;
 
 extern void hallconfig(void);
+extern void SensorInit(void);
+extern void update(void);
+extern void Sensorupdate(void);
 extern float getAngle(void);
+
+
 //extern float getVelocity();
 
 #endif

@@ -13,17 +13,16 @@ int main(void)
 	TIM3_1ms();
 	Hall_Init();
 	hallconfig();
-	
-	delay_ms(1000);
-	
+//	SensorInit();
 	printf("Motor is ready. \r\n");
-
+	delay_ms(100);
 	systick_count();
 	// we can't call delay_us and delay_ms anymore
 	
 	while(1)
 	{ 
-		
+		Sensorupdate();
+//		update();
 		ang1 = getAngle();      
 		
 		printf("M1:%.4f\r\n",ang1);  

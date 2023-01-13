@@ -802,7 +802,7 @@ I (..\Lib\FWLIB\inc\stm32f10x_tim.h)(0x4D783BB4)
 I (..\Lib\FWLIB\inc\stm32f10x_usart.h)(0x4D783BB4)
 I (..\Lib\FWLIB\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\Lib\FWLIB\inc\misc.h)(0x4D783BB4)
-F (..\User\timer.c)(0x63BFB55B)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I ..\Lib\FWLIB\inc -I ..\Simple_FOC -I ..\User -I ..\Main-I.\RTE\_Target_1-IG:\2-Installed\Keil5Packages\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IG:\2-Installed\Keil5Packages\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\output\timer.o --omf_browse ..\output\timer.crf --depend ..\output\timer.d)
+F (..\User\timer.c)(0x63C11ED1)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I ..\Lib\FWLIB\inc -I ..\Simple_FOC -I ..\User -I ..\Main-I.\RTE\_Target_1-IG:\2-Installed\Keil5Packages\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IG:\2-Installed\Keil5Packages\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\output\timer.o --omf_browse ..\output\timer.crf --depend ..\output\timer.d)
 I (..\User\timer.h)(0x63BFB55B)
 I (G:\2-Installed\Keil5Packages\Keil\STM32F1xx_DFP\2.4.0\Device\Include\stm32f10x.h)(0x61AD795E)
 I (G:\2-Installed\Keil5Packages\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F4ADE)
@@ -835,7 +835,7 @@ I (..\Lib\FWLIB\inc\stm32f10x_tim.h)(0x4D783BB4)
 I (..\Lib\FWLIB\inc\stm32f10x_usart.h)(0x4D783BB4)
 I (..\Lib\FWLIB\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\Lib\FWLIB\inc\misc.h)(0x4D783BB4)
-F (..\User\usart.c)(0x63BE647A)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I ..\Lib\FWLIB\inc -I ..\Simple_FOC -I ..\User -I ..\Main-I.\RTE\_Target_1-IG:\2-Installed\Keil5Packages\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IG:\2-Installed\Keil5Packages\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\output\usart.o --omf_browse ..\output\usart.crf --depend ..\output\usart.d)
+F (..\User\usart.c)(0x63C11C31)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I ..\Lib\FWLIB\inc -I ..\Simple_FOC -I ..\User -I ..\Main-I.\RTE\_Target_1-IG:\2-Installed\Keil5Packages\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IG:\2-Installed\Keil5Packages\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\output\usart.o --omf_browse ..\output\usart.crf --depend ..\output\usart.d)
 I (..\User\usart.h)(0x63B2E585)
 I (G:\2-Installed\Keil5Packages\Keil\STM32F1xx_DFP\2.4.0\Device\Include\stm32f10x.h)(0x61AD795E)
 I (G:\2-Installed\Keil5Packages\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F4ADE)
@@ -913,8 +913,8 @@ I (..\User\timer.h)(0x63BFB55B)
 F (..\Simple_FOC\utils.c)(0x63B13CD4)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I ..\Lib\FWLIB\inc -I ..\Simple_FOC -I ..\User -I ..\Main-I.\RTE\_Target_1-IG:\2-Installed\Keil5Packages\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IG:\2-Installed\Keil5Packages\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\output\utils.o --omf_browse ..\output\utils.crf --depend ..\output\utils.d)
 I (..\Simple_FOC\utils.h)(0x63B13AAC)
 I (G:\2-Installed\Keil5\ARM\ARMCC\include\math.h)(0x5E8E3CC2)
-F (..\Simple_FOC\hall.c)(0x63BFC0A5)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I ..\Lib\FWLIB\inc -I ..\Simple_FOC -I ..\User -I ..\Main-I.\RTE\_Target_1-IG:\2-Installed\Keil5Packages\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IG:\2-Installed\Keil5Packages\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\output\hall.o --omf_browse ..\output\hall.crf --depend ..\output\hall.d)
-I (..\Simple_FOC\hall.h)(0x63BFC0FD)
+F (..\Simple_FOC\hall.c)(0x63C114E4)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I ..\Lib\FWLIB\inc -I ..\Simple_FOC -I ..\User -I ..\Main-I.\RTE\_Target_1-IG:\2-Installed\Keil5Packages\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IG:\2-Installed\Keil5Packages\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\output\hall.o --omf_browse ..\output\hall.crf --depend ..\output\hall.d)
+I (..\Simple_FOC\hall.h)(0x63C10663)
 I (..\User\timer.h)(0x63BFB55B)
 I (G:\2-Installed\Keil5Packages\Keil\STM32F1xx_DFP\2.4.0\Device\Include\stm32f10x.h)(0x61AD795E)
 I (G:\2-Installed\Keil5Packages\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F4ADE)
@@ -951,7 +951,7 @@ I (..\User\delay.h)(0x63B1385D)
 I (..\Simple_FOC\utils.h)(0x63B13AAC)
 I (G:\2-Installed\Keil5\ARM\ARMCC\include\math.h)(0x5E8E3CC2)
 I (..\Simple_FOC\foc.h)(0x63BFB55B)
-F (..\Main\main.c)(0x63BFC0A5)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I ..\Lib\FWLIB\inc -I ..\Simple_FOC -I ..\User -I ..\Main-I.\RTE\_Target_1-IG:\2-Installed\Keil5Packages\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IG:\2-Installed\Keil5Packages\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\output\main.o --omf_browse ..\output\main.crf --depend ..\output\main.d)
+F (..\Main\main.c)(0x63C1221F)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I ..\Lib\FWLIB\inc -I ..\Simple_FOC -I ..\User -I ..\Main-I.\RTE\_Target_1-IG:\2-Installed\Keil5Packages\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IG:\2-Installed\Keil5Packages\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\output\main.o --omf_browse ..\output\main.crf --depend ..\output\main.d)
 I (G:\2-Installed\Keil5Packages\Keil\STM32F1xx_DFP\2.4.0\Device\Include\stm32f10x.h)(0x61AD795E)
 I (G:\2-Installed\Keil5Packages\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F4ADE)
 I (G:\2-Installed\Keil5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
@@ -989,7 +989,7 @@ I (..\Main\stm32f10x_it.h)(0x61331B57)
 I (..\Simple_FOC\foc.h)(0x63BFB55B)
 I (..\Simple_FOC\utils.h)(0x63B13AAC)
 I (G:\2-Installed\Keil5\ARM\ARMCC\include\math.h)(0x5E8E3CC2)
-I (..\Simple_FOC\hall.h)(0x63BFC0FD)
+I (..\Simple_FOC\hall.h)(0x63C10663)
 I (..\User\timer.h)(0x63BFB55B)
 I (..\User\delay.h)(0x63B1385D)
 I (..\User\usart.h)(0x63B2E585)

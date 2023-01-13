@@ -10,7 +10,7 @@ long angle_data_prev = 0;
 unsigned long velocity_calc_timestamp = 0;
 float angle_prev = 0;
 #define velocity_max (float)1000;
-#define pole_pairs  13
+#define pole_pairs  6
 
 int HU;
 int HV; 
@@ -24,33 +24,73 @@ long total_interrupt;
 unsigned long pulse_timestamp;
 long pulse_diff;
 Type_Direction direction;
+static Type_Direction old_direction ;
+
+float angle_prev;
+long angle_prev_ts;
+int32_t full_rotations;
+
+
+int new_hall_state;
+int new_electric_sector;
 
 void hallconfig()
 {
-	
-	unsigned long now_us;
-	int new_hall_state;
-	int new_electric_sector;
-	
-	static Type_Direction old_direction ;
-	
-	electric_rotations = 0;
-	now_us = SysTick -> VAL;
-	
 	HU = GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_6);
 	HV = GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_7);
 	HW = GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_12);
 	cpr= pole_pairs *6;
+	Sensorupdate();
+}
+
+void SensorInit()
+{
+	unsigned long now_us;
+	now_us = SysTick -> VAL;
+	
+	getAngle();
+	delay_ms(1);
+	getAngle();
+	delay_ms(1);
+	angle_prev = getAngle();
+	angle_prev_ts = now_us;
+}
+
+void update()
+{
+	unsigned long now_us;
+	float d_angle;
+	float val;
+	
+	now_us = SysTick -> VAL;
+	
+	angle_prev_ts = 0;
+	full_rotations = 0;
+	
+	val = getAngle();
+	angle_prev_ts = now_us;
+	d_angle = val - angle_prev;
+	
+	if(fabs(d_angle) > (0.8*_2PI)) 
+		full_rotations += (d_angle > 0) ? -1 : 1;
+	angle_prev = val;
+}
+void Sensorupdate()
+{	
+	unsigned long now_us;
+	
+	now_us = SysTick -> VAL;
+
+	electric_rotations = 0;
 	
 	new_hall_state = HU + (HV<<1) + (HW<<2);
 	
 	if (new_hall_state == hall_state)
 		return;
 	
-	new_electric_sector = ELECTRIC_SECTORS[new_hall_state];
+	hall_state = new_hall_state;
 	
-	
-	
+	new_electric_sector = ELECTRIC_SECTORS[hall_state];
 	
 	if (new_electric_sector - electric_sector >3)
 	{
@@ -78,13 +118,14 @@ void hallconfig()
 	pulse_timestamp = now_us;
 	total_interrupt ++;
 	old_direction = direction;
-	
+
 }	
 
 float getAngle()
 {
 	float angle;
 	angle = ((float)(electric_rotations * 6 + electric_sector) / (float)cpr) * _2PI ;
+	//angle = full_rotations * _2PI + angle_prev;
 	
 	return (angle);
 	

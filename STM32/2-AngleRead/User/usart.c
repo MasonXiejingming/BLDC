@@ -83,83 +83,53 @@ void usart1_init(unsigned long bound)
 //********************************************************
 //process of interrupt with USART1
 //********************************************************
-void USART1_IRQHandler(void)   
-{	
-	unsigned char Read;
-	if(USART_GetITStatus(USART1, USART_IT_RXNE) != RESET)
-	{
-		Read = USART_ReceiveData(USART1);
-		//read the receiving data
-		
-		//the receive doesn't finish
-		if((USART_RX_STA&0x8000) == 0)
-		{
-			//when it has received 0x0D
-			if(USART_RX_STA&0x4000)
-			{
-				//when receive wrong, again
-				if(Read!=0x0a) 
-					USART_RX_STA = 0;
-				else 
-				{
-					USART_RX_STA |= 0x8000;
-					//done the receive
-					
-					USART_RX_BUFFER[USART_RX_STA&0x3FFF] = '\0';
-					//the last one bit is added with 0, 
-					//it's better to make a decision. 
-				}
-			}
-			
-			// not yet received 0x0D
-			else
-			{
-				if(Read==0x0D)
-					USART_RX_STA |= 0x4000;
-				else
-				{
-					USART_RX_BUFFER[USART_RX_STA&0x3FFF] = Read;
-					USART_RX_STA++;
-					
-					if(USART_RX_STA > (USART_REC_LEN-1))
-						USART_RX_STA = 0;
-						//receive wrong, again
-				}
-			}
-		}
-	}
-}
-
-
-//float target;
-////current targe value - depend on the controller 
-
-//void commander_run(void)
-//{
-//	if ((USART_RX_STA&0x8000) != 0)
+//void USART1_IRQHandler(void)   
+//{	
+//	unsigned char Read;
+//	if(USART_GetITStatus(USART1, USART_IT_RXNE) != RESET)
 //	{
-//		switch (USART_RX_BUFFER[0])
-//		{
-//			case 'H':
-//				printf("Hello World!\r\n");
-//				break;
-//			case 'T':
-//				target = atof((const char *)(USART_RX_BUFFER+1));
-//				printf("RX = %.4f\r\n", target);
-//				break;
-//			case 'D':
-//				MotorDisable;
-//				printf("Motor disable!\r\n");
-//				break;
-//			case 'E':
-//				MotorDisable;
-//				printf("Motor enable!\r\n");
-//				break;
-//			
-//		}
+//		Read = USART_ReceiveData(USART1);
+//		//read the receiving data
 //		
-//		USART_RX_STA = 0;
+//		//the receive doesn't finish
+//		if((USART_RX_STA&0x8000) == 0)
+//		{
+//			//when it has received 0x0D
+//			if(USART_RX_STA&0x4000)
+//			{
+//				//when receive wrong, again
+//				if(Read!=0x0a) 
+//					USART_RX_STA = 0;
+//				else 
+//				{
+//					USART_RX_STA |= 0x8000;
+//					//done the receive
+//					
+//					USART_RX_BUFFER[USART_RX_STA&0x3FFF] = '\0';
+//					//the last one bit is added with 0, 
+//					//it's better to make a decision. 
+//				}
+//			}
+//			
+//			// not yet received 0x0D
+//			else
+//			{
+//				if(Read==0x0D)
+//					USART_RX_STA |= 0x4000;
+//				else
+//				{
+//					USART_RX_BUFFER[USART_RX_STA&0x3FFF] = Read;
+//					USART_RX_STA++;
+//					
+//					if(USART_RX_STA > (USART_REC_LEN-1))
+//						USART_RX_STA = 0;
+//						//receive wrong, again
+//				}
+//			}
+//		}
 //	}
 //}
+
+
 
 
