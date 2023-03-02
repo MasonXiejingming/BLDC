@@ -11,8 +11,10 @@ int main(void)
 	TIM3_1ms();
 	PWM_Enable();
 	
-	delay_ms(1000);
+	delay_ms(2000);
 	
+	
+	//test
 	voltage_power_supply 	= 8;
 	voltage_limit        	= 1;
 	velocity_limit				= 20;
